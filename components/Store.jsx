@@ -9,8 +9,8 @@ const Store = ({ StoreData }) => {
         <div className=' flex  flex-between gap-6 flex-wrap pl-8 '>
             
             {StoreData.map(data => (
-                <div key={data.id} className='border-2 bg-white  flex flex-col w-96 gap-2 p-6 justify-center items-center'>
-                    <img src={data.img} alt="hhh" className='   ' />
+                <div key={data.id} className='border-2 bg-white  flex flex-col w-96 gap-2 p-6 justify-center items-center hover:shadow-2xl  duration-300'>
+                    <img src={data.img} alt="hhh" className='hover:[300px]' />
                     <p className='font-bold'>{data.description}</p>
                     <div className='flex gap-4'>
                         <span>{`$`}{data.price}</span>

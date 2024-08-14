@@ -32,7 +32,7 @@ const ProductsCarousal = () => {
           </div>
           <div className="row-container" id="slider">
           {StoreData.map(data => (
-                <div key={data.id} className='border-2 bg-white  flex flex-col w-96 gap-2 p-6 justify-center items-center'>
+                <div key={data.id} className='border-2 bg-white  flex flex-col w-96 gap-2 p-6 justify-center items-center hover:shadow-2xl  duration-300'>
                     <img src={data.img} alt="hhh" className='h-48' />
                     <p className='font-bold'>{data.description}</p>
                     <div className='flex gap-4'>

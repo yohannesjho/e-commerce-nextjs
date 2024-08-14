@@ -21,7 +21,7 @@ export const StoreData = [
     id:3
   },
   {
-    img : 'https://blank.demos.my-boundless.app/_next/image?url=https%3A%2F%2Fmedia.boundless-commerce.com%2Fthumb%2Fi2%2Fimages%2F26%2F0e%2F7b0f95f7e69ea79069aca4d613df.jpeg%3Fmode%3Dscale%26max-size%3D300&w=384&q=100',
+    img : 'https://blank.demos.my-boundless.app/_next/image?url=https%3A%2F%2Fmedia.boundless-commerce.com%2Fthumb%2Fi2%2Fimages%2F42%2F8c%2Ffc30842678a18574925d97e9aa91.jpeg%3Fmode%3Dscale%26max-size%3D300&w=384&q=100',
     description: 'Case',
     price: 15.00,
     discountedPrice: 7.5,
