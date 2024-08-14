@@ -4,7 +4,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 
 const Cases = () => {
     return (
-        <div className=' bg-slate-200 w-96'>
+        <div className=' bg-slate-200 w-96 h-2/4'>
             <div className='my-4'>
                 <h1 className='mb-4 font-bold'>iPhone cases</h1>
                 <ul className='pl-4'>

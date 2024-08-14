@@ -1,6 +1,9 @@
 'use client'
 import Cases from "@/components/Cases";
+import Footer from "@/components/Footer";
 import ImageSlider from "@/components/ImageSlider";
+import MiddleImage from "@/components/MiddleImage";
+import ProductsCarousal from "@/components/tranding/TrandingSlider";
 import Store from "@/components/Store";
 import { StoreData } from "@/public/data/StoreData";
 
@@ -17,12 +20,14 @@ export default function Home() {
 
   ]
   return (
-    <main className="  px-24 pt-10 flex gap-12  w-full ">
-
-      <Cases />
-      <Store StoreData={StoreData} />
-
-
+    <main >
+      <div className="  px-24 pt-10 flex gap-12  w-full ">
+        <Cases />
+        <Store StoreData={StoreData} />
+      </div>
+      <MiddleImage />
+      <ProductsCarousal/>
+      <Footer/>
     </main>
   );
 }
