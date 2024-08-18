@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <MiddleImage />
       <ProductsCarousal/>
-      <Footer/>
+       
     </main>
   );
 }
