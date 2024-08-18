@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Header = () => {
     return (
         <div className=''>
-            <div className='flex justify-between gap-48 px-24 py-12'>
+            <div className='flex justify-between gap-48  py-12 px-2 sm:px-8 md:px-16 lg:px-24'>
                 <div className='flex gap-2'>
                     {<FiShoppingCart className='text-fuchsia-700' size={30} />}
                     <div>

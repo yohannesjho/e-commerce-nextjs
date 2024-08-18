@@ -9,7 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className='bg-white px-24 py-12 flex flex-col-reverse justify-between  md:flex-row gap-12'>
+    <div className='bg-white px-2 sm:px-8 md:px-16 lg:px-24 py-12 flex flex-col-reverse justify-between  md:flex-row gap-12'>
       <div className='w-96 flex flex-col gap-8'>
         <div className='flex gap-2'>
           {<FiShoppingCart className='text-fuchsia-700' size={30} />}
