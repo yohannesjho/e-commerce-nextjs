@@ -5,9 +5,11 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosRefresh } from "react-icons/io";
 import { PiPhoneCall } from "react-icons/pi";
 import { useRouter } from 'next/navigation';
+import useCart from "../use-cart";
 
 
 const description = ({ searchParams }) => {
+  const {addToCart} = useCart();
 
   const {sourceImage1,sourceImage2,Description,Price,DiscountedPrice} = searchParams
 
@@ -15,6 +17,12 @@ const description = ({ searchParams }) => {
   const [cartItems, setCartItems] = useState([])
   let [quantity, setQuantity] = useState(1)
 
+  const product = {
+    image:sourceImage1,
+    description: Description,
+    price: Price,
+    quantity: quantity
+  }
 
 
   const incrementQuantity = () => {
@@ -33,18 +41,12 @@ const description = ({ searchParams }) => {
 
   }
 
-  const addToCart = () => {
-    const item = {
-      name: 'explorers wanted',
-      price: 4,
-      quantity: quantity,
-      total: 4 * quantity
-    }
-    setCartItems([...cartItems, item])
-    setQuantity(1)
-
-
+  const handleAddToCart = () =>{
+    addToCart(product);
+    console.log(product)
   }
+
+   
 
   return (
     <main className='mx-2 sm:mx-8 md:mx-16 lg:mx-24 mb-24'>
@@ -93,16 +95,11 @@ const description = ({ searchParams }) => {
             </div>
             <div>
               <button onClick={() => decrementQuantity()} className='border-2 border-gray-400 p-2 text-center w-12 text-xl hover:bg-slate-600 hover:text-white' >-</button>
-              <input className='border-2 border-gray-400 p-2 text-center w-20 text-xl' on type="number" onChange={(e) => setQuantity(e.target.value)} value={quantity} min='0' />
+              <input className='border-2 border-gray-400 p-2 text-center w-20 text-xl'  type="number" onChange={(e) => setQuantity(e.target.value)} value={quantity} min='1' />
               <button onClick={() => incrementQuantity()} className='border-2 border-gray-400 p-2 text-center w-12 text-xl hover:bg-slate-600 hover:text-white' >+</button>
-              <Link href={{
-                pathname: '/cart',
-                query: {
-                    Price: DiscountedPrice,
-                    quantity: quantity,
-
-                }
-              }}><button onClick={() => addToCart()} className='text-xl px-6 py-2 rounded-md bg-violet-500 text-black ml-8'>Buy</button></Link>
+               
+                
+              <button onClick={() => handleAddToCart()} className='text-xl px-6 py-2 rounded-md bg-violet-500 text-black ml-8'>Add to cart</button>
             </div>
             <hr className="border-gray-300 border-1 my-12" />
 

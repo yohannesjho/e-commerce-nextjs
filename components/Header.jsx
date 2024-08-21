@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu, IoMdArrowDropdown } from "react-icons/io";
-import LINK from 'next/link'
+ 
 import Link from 'next/link';
 const Header = () => {
     return (
@@ -14,12 +14,12 @@ const Header = () => {
                         <h1 className=''>commerce</h1>
                     </div>
                 </div>
-                <div className='flex gap-2'>
-                    <div>
+                <div className='flex gap-2  '>
+                    <Link href='/cart'>
                         {<FiShoppingCart size={30} />}
-                        <p className=''>$18</p>
-                    </div>
-                    <IoMdMenu size={30} />
+                        <span className='font-bold'>$18</span>
+                    </Link>
+                    {/*<IoMdMenu size={30} />*/}
                 </div>
             </div>
             <div>
